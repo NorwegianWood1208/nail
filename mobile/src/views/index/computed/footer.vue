@@ -57,8 +57,9 @@ export default{
           }
           .des2{
               width: 100%;
+              box-sizing: border-box;
               text-align: left;
-              text-indent: 35px;
+              padding-left: 35px;
               font:bold 28px/48px "微软雅黑";
           }
           .des3{

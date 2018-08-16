@@ -45,16 +45,17 @@ export default {
     .con-global{
         width: 100%;
         height: 450px;
-        background: #323232;
+        background: #323232 url(../../../assets/imgs/global.jpg) no-repeat;
+        background-size: 100% 450px;
         position: relative;
         padding-top: 60px;
         .title{
-            width:450px;
+            width:470px;
             height: 150px;
             font: 42px/150px '微软雅黑';
             color: #949494;
             position: absolute;
-            top: 170px;
+            top: 160px;
             left: -160px;
             text-align: right;
             background: #323232;

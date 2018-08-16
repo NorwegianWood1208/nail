@@ -47,14 +47,17 @@
                             <div class="swiper-pagination"  slot="pagination"></div>
                         </swiper>
                         <!-- ja -->
-                        <div class="ja" >
-                            <div class="swiper-title">{{$t("high")}}</div>
-                            <div class="swiper-con">
-                                <div class="swiper-lis">{{$t("Stock")}}</div>
-                                <div class="swiper-lis">{{$t("NASDAQ")}}</div>
-                                <div class="swiper-lis">{{$t("Tokyo")}}</div>
-                            </div>
-                        </div>
+                        <swiper  :options="swiperOption" class="ja">
+                            <swiper-slide>
+                                <div class="swiper-title">{{$t("high")}}</div>
+                                <div class="swiper-con">
+                                    <div class="swiper-lis">{{$t("Stock")}}</div>
+                                    <div class="swiper-lis">{{$t("NASDAQ")}}</div>
+                                    <div class="swiper-lis">{{$t("Tokyo")}}</div>
+                                </div>
+                            </swiper-slide>
+                            <div class="swiper-pagination"  slot="pagination"></div>
+                        </swiper>
                     </div>
                     <!-- 第二个模块 -->
                     <div class="lis">
@@ -113,13 +116,13 @@
                                     <div class="swiper-lis">世界最高取引所上場のカード式</div>
                                     <div class="swiper-lis">20個の主権国家設定ブロックチェーン</div>
                                     <div class="swiper-lis">国家レベルテレビの宣伝宣伝</div>
-                                    <div class="swiper-lis">オフライン各国の高級vip顧客と</div>
+                                    <div class="swiper-lis">オフライン各国の高級</div>
                                 </div>
                             </swiper-slide>
                             <swiper-slide>
                                 <div class="swiper-title">{{$t("Superior")}}</div>
                                  <div class="swiper-con">
-                                    <div class="swiper-lis">の交流サービス</div>
+                                    <div class="swiper-lis">vip顧客との交流サービス</div>
                                 </div>
                             </swiper-slide>
                             <div class="swiper-pagination"  slot="pagination"></div>
@@ -214,14 +217,14 @@
                             <swiper-slide>
                                 <div class="swiper-title">{{$t("supported")}}</div>
                                  <div class="swiper-con">
-                                    <div class="swiper-lis">NAIL ecology entails investment & financing platform,  media publicity platform,  blockchain project hatching platform, exchange, business institute etc,. all </div>
+                                    <div class="swiper-lis">NAIL ecology entails investment & financing platform,  media publicity platform,  blockchain project hatching platform, exchange, business institute  </div>
     
                                 </div>
                             </swiper-slide>
                             <swiper-slide>
                                 <div class="swiper-title">{{$t("supported")}}</div>
                                  <div class="swiper-con">
-                                    <div class="swiper-lis">these engagement of businesses will be conducted on the premise of multi-nation support, therefore, NAIL is the optimal choice.</div>
+                                    <div class="swiper-lis">etc . all these engagement of businesses will be conducted on the premise of multi-nation support, therefore, NAIL is the optimal choice.</div>
                                 </div>
                             </swiper-slide>
                             <swiper-slide>
@@ -239,19 +242,20 @@
                             <swiper-slide>
                                 <div class="swiper-title">{{$t("Superior")}}</div>
                                  <div class="swiper-con">
-                                    <div class="swiper-lis">所有这些业务的参与都需要多个国家相互支持为前提，而NAIL就是最好的选择。ナイル生态系は、投资プラットフォーム、メディアの宣伝プラットフォーム</div>
+                                    <div class="swiper-lis">所有这些业务的参与都需要多个国家相互支持为前提，而NAIL就是最好的选择。ナイル生态系は、投资プラットフォーム、メディアの宣伝プラッ</div>
                                 </div>
                             </swiper-slide>
                             <swiper-slide>
                                 <div class="swiper-title">{{$t("Superior")}}</div>
                                  <div class="swiper-con">
-                                    <div class="swiper-lis">取引所、商业学院など、すべての业务の参加には、复数の国の相互援助を前提にしており、nailは最高の选択である。</div>
-                                    <div class="swiper-lis">融資プラットフォーム</div>
+                                    <div class="swiper-lis">トフォーム取引所、商业学院など、すべての业务の参加には、复数の国の相互援助を前提にしており、nailは最高の选択である。</div>
+                                    
                                 </div>
                             </swiper-slide>
                             <swiper-slide>
                                 <div class="swiper-title">{{$t("Superior")}}</div>
                                  <div class="swiper-con">
+                                     <div class="swiper-lis">融資プラットフォーム</div>
                                     <div class="swiper-lis">国家レベルのメディアの宣伝プラットフォーム。</div>
                                     <div class="swiper-lis">ブロックチェーン化プラットフォーム</div>
                                 </div>
@@ -312,7 +316,7 @@
 
                     <!-- 留个 -->
                     <div class="lis">
-                        <img src="../../../assets/imgs/block.png" alt="">
+                        <img  src="../../../assets/imgs/block.png" alt="">
                         <swiper  :options="swiperOption" class="zhh">
                             <swiper-slide>
                                 <div class="swiper-title">{{$t("landmark")}}</div>
@@ -337,16 +341,19 @@
                             </swiper-slide>
                             <div class="swiper-pagination"  slot="pagination"></div>
                         </swiper>
-                        <div class="ja">
-                             <div class="swiper-title">{{$t("landmark")}}</div>
-                            <div class="swiper-con">
-                                <div class="swiper-lis">ブロックチェーンを建設する国は日本、韓国、モンゴル、シンガポール、中国、マレーシア、カナダ、キルギスタン、米国、ロシア。</div>
-                            </div>
-                        </div>
+                        <swiper :options="swiperOption" class="ja">
+                            <swiper-slide>
+                                <div class="swiper-title">{{$t("landmark")}}</div>
+                                <div class="swiper-con">
+                                    <div class="swiper-lis">ブロックチェーンを建設する国は日本、韓国、モンゴル、シンガポール、中国、マレーシア、カナダ、キルギスタン、米国、ロシア。</div>
+                                </div>
+                            </swiper-slide>
+                            <div class="swiper-pagination"  slot="pagination"></div>
+                        </swiper>
                     </div>
                     <!-- 七个 -->
                     <div class="lis">
-                        <img src="../../../assets/imgs/international.png" alt="">
+                        <img style="paddingTop:5px;" src="../../../assets/imgs/international.png" alt="">
                         <swiper  :options="swiperOption" class="zhh">
                             <swiper-slide>
                                 <div class="swiper-title">{{$t("international")}}</div>
@@ -365,16 +372,19 @@
                             </swiper-slide>
                             <div class="swiper-pagination"  slot="pagination"></div>
                         </swiper>
-                        <div class="ja">
-                            <div class="swiper-title">{{$t("international")}}</div>
-                            <div class="swiper-con">
-                                <div class="swiper-lis">この国は、日本、韓国、モンゴル、中国、キルギスタンで行われる。</div>
-                            </div>
-                        </div>
+                        <swiper :options="swiperOption" class="ja">
+                            <swiper-slide>
+                                <div class="swiper-title">{{$t("international")}}</div>
+                                <div class="swiper-con">
+                                    <div class="swiper-lis">この国は、日本、韓国、モンゴル、中国、キルギスタンで行われる。</div>
+                                </div>
+                            </swiper-slide>
+                            <div class="swiper-pagination"  slot="pagination"></div>
+                        </swiper>
                     </div>
                     <!-- 八个 -->
                     <div class="lis no-magin-r">
-                        <img src="../../../assets/imgs/mail.png" alt="">
+                        <img  src="../../../assets/imgs/mail.png" alt="">
                         <swiper  :options="swiperOption" class="zhh">
                             <swiper-slide>
                                 <div class="swiper-title">{{$t("hatching")}}</div>
@@ -393,12 +403,15 @@
                             </swiper-slide>
                             <div class="swiper-pagination"  slot="pagination"></div>
                         </swiper>
-                        <div class="ja">
-                            <div class="swiper-title">{{$t("hatching")}}</div>
-                            <div class="swiper-con">
-                                <div class="swiper-lis">ブロックチェーンを建設する国は、日本、中国、キルギスタンで行われる</div>
-                            </div>
-                        </div>
+                        <swiper :options="swiperOption" class="ja">
+                            <swiper-slide>
+                                <div class="swiper-title">{{$t("hatching")}}</div>
+                                <div class="swiper-con">
+                                    <div class="swiper-lis">ブロックチェーンを建設する国は、日本、中国、キルギスタンで行われる</div>
+                                </div>
+                            </swiper-slide>
+                            <div class="swiper-pagination"  slot="pagination"></div>
+                        </swiper>
                     </div>  
                 </div>
             </div>
@@ -420,35 +433,37 @@ export default {
       }
   },
    updated() {
-      let lang = window.localStorage.getItem('language')
-      let one1 = document.getElementsByClassName('one1')[0]
-      let one2 = document.getElementsByClassName('one2')[0]
-      let one4 = document.getElementsByClassName('one4')[0]
-      var zh = document.querySelectorAll('.zh')
+        let lang = window.localStorage.getItem('language')
+        let one1 = document.getElementsByClassName('one1')[0]
+        let one2 = document.getElementsByClassName('one2')[0]
+        let one4 = document.getElementsByClassName('one4')[0]
+        let one5 = document.getElementsByClassName('one5')[0]
+        var zh = document.querySelectorAll('.zh')
         var zhh = document.querySelectorAll('.zhh')
         var slide = document.querySelectorAll('.mySwiper')
         var ja = document.querySelectorAll('.ja')
-      if (lang === 'en') {
-         this.$refs.layoutright.style.paddingTop = '15px'
-         this.$refs.layoutdes.style.paddingTop = '0px'
-         one1.style.marginBottom = '10px'
-         one2.style.marginBottom = '20px'
-         one4.style.marginBottom = '25px'
+        if (lang === 'en') {
+            this.$refs.layoutright.style.paddingTop = '15px'
+            this.$refs.layoutdes.style.paddingTop = '0px'
+            one1.style.marginBottom = '10px'
+            one2.style.marginBottom = '20px'
+            one4.style.marginBottom = '16px'
+            one5.style.marginBottom = '16px'
         //  console.log(one1);
-         for (let i = 0; i < zhh.length; i++) {
-            zhh[i].style.display = 'none'
-        }
-        for (let i = 0; i < zh.length; i++) {
-            zh[i].style.display = 'none'
-        }
-        for (let i = 0; i < slide.length; i++) {
-            slide[i].style.display = 'block'
-        }
-        for (let i = 0; i < ja.length; i++) {
-            ja[i].style.display = 'none'
-        }
-      }else if(lang === 'ja'){
-          for (let i = 0; i < zh.length; i++) {
+            for (let i = 0; i < zhh.length; i++) {
+                zhh[i].style.display = 'none'
+            }
+            for (let i = 0; i < zh.length; i++) {
+                zh[i].style.display = 'none'
+            }
+            for (let i = 0; i < slide.length; i++) {
+                slide[i].style.display = 'block'
+            }
+            for (let i = 0; i < ja.length; i++) {
+                ja[i].style.display = 'none'
+            }
+        }else if(lang === 'ja'){
+            for (let i = 0; i < zh.length; i++) {
                 zh[i].style.display = 'none'
             }
             for (let i = 0; i < zhh.length; i++) {
@@ -460,36 +475,39 @@ export default {
             for (let i = 0; i < ja.length; i++) {
                 ja[i].style.display = 'block'
             }
-           one2.style.marginBottom = '20px'
-            this.$refs.layoutright.style.paddingTop = '25px'
-          this.$refs.layoutdes.style.paddingTop = '10px'
-         one1.style.marginBottom = '20px'
-         one4.style.marginBottom = '30px'
-      }else{
-          for (let i = 0; i < zh.length; i++) {
-            zh[i].style.display = 'block'
+            one2.style.marginBottom = '20px'
+            this.$refs.layoutright.style.paddingTop = '20px'
+            this.$refs.layoutdes.style.paddingTop = '10px'
+            one1.style.marginBottom = '16px'
+            one4.style.marginBottom = '31px'
+            one5.style.marginBottom = '32px'
+        }else{
+            for (let i = 0; i < zh.length; i++) {
+                zh[i].style.display = 'block'
+            }
+            for (let i = 0; i < zhh.length; i++) {
+                zhh[i].style.display = 'block'
+            }
+            for (let i = 0; i < slide.length; i++) {
+                slide[i].style.display = 'none'
+            }
+            for (let i = 0; i < ja.length; i++) {
+                ja[i].style.display = 'none'
+            }
+            this.$refs.layoutright.style.paddingTop = '20px'
+            this.$refs.layoutdes.style.paddingTop = '10px'
+            one1.style.marginBottom = '20px'
+            one2.style.marginBottom = '30px'
+            one4.style.marginBottom = '33px'
+            one5.style.marginBottom = '30px'
         }
-        for (let i = 0; i < zhh.length; i++) {
-            zhh[i].style.display = 'block'
-        }
-        for (let i = 0; i < slide.length; i++) {
-            slide[i].style.display = 'none'
-        }
-        for (let i = 0; i < ja.length; i++) {
-            ja[i].style.display = 'none'
-        }
-          this.$refs.layoutright.style.paddingTop = '25px'
-          this.$refs.layoutdes.style.paddingTop = '10px'
-         one1.style.marginBottom = '20px'
-         one2.style.marginBottom = '30px'
-         one4.style.marginBottom = '30px'
-      }
-  },
+    },
   mounted (){
       let lang = window.localStorage.getItem('language')
       let one1 = document.getElementsByClassName('one1')[0]
       let one2 = document.getElementsByClassName('one2')[0]
       let one4 = document.getElementsByClassName('one4')[0]
+      let one5 = document.getElementsByClassName('one5')[0]
       var zh = document.querySelectorAll('.zh')
         var zhh = document.querySelectorAll('.zhh')
         var ja = document.querySelectorAll('.ja')
@@ -499,23 +517,20 @@ export default {
          this.$refs.layoutdes.style.paddingTop = '0px'
          one1.style.marginBottom = '10px'
          one2.style.marginBottom = '20px'
-         one4.style.marginBottom = '25px'
+         one4.style.marginBottom = '16px'
+         one5.style.marginBottom = '16px'
          for (let i = 0; i < zhh.length; i++) {
             zhh[i].style.display = 'none'
         }
-        for (let i = 0; i < zh.length; i++) {
-            zh[i].style.display = 'none'
-        }
-
         for (let i = 0; i < slide.length; i++) {
             slide[i].style.display = 'block'
         }
+        for (let i = 0; i < ja.length; i++) {
+                ja[i].style.display = 'none'
+            }
         //  console.log(one1);
          
       }else if(lang === 'ja'){
-          for (let i = 0; i < zh.length; i++) {
-                zh[i].style.display = 'none'
-            }
             for (let i = 0; i < zhh.length; i++) {
                 zhh[i].style.display = 'none'
             }
@@ -526,14 +541,12 @@ export default {
                 ja[i].style.display = 'block'
             }
            one2.style.marginBottom = '20px'
-            this.$refs.layoutright.style.paddingTop = '25px'
-          this.$refs.layoutdes.style.paddingTop = '10px'
-         one1.style.marginBottom = '20px'
-         one4.style.marginBottom = '30px'
+            this.$refs.layoutright.style.paddingTop = '20px'
+            this.$refs.layoutdes.style.paddingTop = '10px'
+            one1.style.marginBottom = '16px'
+            one4.style.marginBottom = '31px'
+            one5.style.marginBottom = '32px'
       }else{
-          for (let i = 0; i < zh.length; i++) {
-            zh[i].style.display = 'block'
-        }
         for (let i = 0; i < zhh.length; i++) {
             zhh[i].style.display = 'block'
         }
@@ -543,11 +556,12 @@ export default {
         for (let i = 0; i < ja.length; i++) {
             ja[i].style.display = 'none'
         }
-          this.$refs.layoutright.style.paddingTop = '25px'
-          this.$refs.layoutdes.style.paddingTop = '10px'
-         one1.style.marginBottom = '20px'
-         one2.style.marginBottom = '30px'
-         one4.style.marginBottom = '30px'
+        this.$refs.layoutright.style.paddingTop = '20px'
+        this.$refs.layoutdes.style.paddingTop = '10px'
+        one1.style.marginBottom = '20px'
+        one2.style.marginBottom = '30px'
+        one4.style.marginBottom = '33px'
+        one5.style.marginBottom = '30px'
       }
   }
 }
@@ -561,7 +575,7 @@ export default {
 }
 .con-layout{
     width: 100%;
-    height: 2020px;
+    height: 2030px;
     box-sizing: border-box;
     background: #fff;
     padding-top: 60px;
@@ -576,7 +590,7 @@ export default {
             background: #4e4e4e;
             text-align: center;
             margin:  0 auto;
-            font: 26px/60px "Humnst777";
+            font: 26px/60px Calibri,"微软雅黑";
         }
         .layout-tree{
             width: 100%;
@@ -592,7 +606,7 @@ export default {
                 box-sizing: border-box;
                 color: #9c9c9c;
                 text-align: right;
-                font: 24px/32px Calibri;
+                font: 24px/32px Calibri,"微软雅黑";
                 .one1{
                     color:#9c9c9c;
                     margin-bottom: 40px;
@@ -613,7 +627,7 @@ export default {
                 margin-left: 90px;
                 box-sizing: border-box;
                 color: #9c9c9c;
-                font: 24px/32px Calibri;
+                font: 24px/32px Calibri,"微软雅黑";
                 .one4{
                     color:#9c9c9c;
                     margin-bottom: 60px;
@@ -632,7 +646,7 @@ export default {
         width: 100%;
         .title{
             padding-left: 40px;
-            font: 30px/60px "Humnst777";
+            font:bold 30px/60px "Humnst777";
             margin-bottom: 30px;
         }
         .ul{
@@ -641,12 +655,26 @@ export default {
                 width: 100%;
                 height: 320px;
                 padding-left: 10px;
-                .swiper-pagination-bullet{
-                    background: #3d3d3d;
+                .swiper-pagination-bullets{
+                    // width: 100%;
+                    // height: 20px;
+                    .swiper-pagination-bullet{
+                        // width: 8px;
+                        // height: 8px;
+                        // padding: 0;
+                        margin-right: 0;
+                        border-radius: 8px;
+                        background: #3d3d3d;
+                    }
+                    .swiper-pagination-bullet-active{
+                        // width: 8px;
+                        // height: 8px;
+                        // margin: 0;
+                        border-radius: 8px;
+                        background: #969696;
+                    }
                 }
-                .swiper-pagination-bullet-active{
-                    background: #969696;
-                }
+                
                 .lis{
                     width: 48%;
                     height: 320px;
@@ -656,53 +684,58 @@ export default {
                     img{
                         float: left;
                     }
-                    .zh{
-                        width: 280px;
-                        height: 340px;
-                        float: left;
-                        display: none;
-                        .swiper-title{
-                            height: 76px;
-                            font: 28px/28px "Humnst777";
-                            margin-bottom: 20px;
-                        }
-                        .swiper-con{
-                            font: 24px/24px "Humnst777";
+                    .zhh{
+                        margin-top: 20px;
+                        .swiper-slide{
+                            width: 280px;
+                            height: 340px;
+                            float: left;
+                            .swiper-title{
+                                height: 76px;
+                                font:bold 28px/28px Calibri,"微软雅黑";
+                                margin-bottom: 20px;
+                            }
+                            .swiper-con{
+                                font: 24px/24px Calibri,"微软雅黑";
+                            }
                         }
                     }
                     .ja{
-                        width: 280px;
-                        height: 340px;
-                        float: left;
-                        display: none;
-                        .swiper-title{
-                            height: 76px;;
-                            font: 28px/28px "Humnst777";
-                            margin-bottom: 20px;
-                        }
-                        .swiper-con{
-                            font: 24px/24px "Humnst777";
+                        margin-top: 20px;
+                        .swiper-slide{
+                            width: 280px;
+                            height: 341px;
+                            float: left;
+                            .swiper-title{
+                                height: 76px;;
+                                font:bold 28px/28px Calibri,"微软雅黑";
+                                margin-bottom: 20px;
+                            }
+                            .swiper-con{
+                                font: 24px/24px Calibri,"微软雅黑";
+                            }
                         }
                     }
                     .swiper-container{
                         width: 280px;
                         height: 340px;
                         float: left;
+                        margin-top: 25px;
                         .swiper-slide{
                             width: 280px;
                             height: 340px;
                             float: left;
                             .swiper-title{
                                 height: 90px;
-                                font: 28px/40px "微软雅黑";
+                                font:bold 28px/40px Calibri,"微软雅黑";
                                 margin-bottom: 20px;
                                 text-align:justify;
                                 text-justify:inter-ideograph;
                                 word-break:break-all;
                             }
                             .swiper-con{
-                                width: 250px;
-                                font: 24px/28px "微软雅黑";
+                                width: 280px;
+                                font: 24px/28px Calibri,"微软雅黑";
                                 text-align:justify;
                                 text-justify:inter-ideograph;
                                 word-break:break-all;

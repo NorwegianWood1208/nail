@@ -64,7 +64,7 @@ export default {
                     height: 55px;
                     padding-top: 18px;
                     box-sizing: border-box;
-                    font: 18px/42px "微软雅黑";
+                    font:bold 18px/42px "微软雅黑";
                     img{
                         margin-right: 22px;
                         margin-top: -18px;

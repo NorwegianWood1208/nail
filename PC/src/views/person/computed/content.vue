@@ -1,15 +1,16 @@
 <template>
     <div class="person-index">
         <div class="person-head">
-
-            <m-echarts
+            <div class="head-left">
+                <m-echarts
                 :echartStyle="s"
                 :titleText="a"
                 :opinion="c"
                 :seriesName="d"
                 :opinionData="e"
                 v-on:currentEchartData="getEchartData"
-            ></m-echarts>
+                ></m-echarts>
+            </div>
         </div>
     </div>
 </template>
@@ -54,8 +55,14 @@ export default {
         background: #fff;
         .person-head{
             width: 100%;
-            height: 410px;;
+            height: 410px;
+            padding-top: 65px;
             border-bottom: 1px solid #b8b8b8;
+            .head-left{
+                width: 433px;
+                height: 348px;
+                background: teal;
+            }
         }
     }
 </style>

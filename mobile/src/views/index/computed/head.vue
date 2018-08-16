@@ -11,24 +11,37 @@
                 <div class="login">{{$t("Login")}}/</div>
                 <div class="register">{{$t("Register")}}</div>
             </div> -->
-            <select class="lange" @change="handchange($event)" ref="aaa">
+            <!-- <select class="lange" @change="handchange($event)" ref="aaa">
                 <option class="desfont" v-for="(index,value) in langu" :value="value" :key="value">{{index}}</option>
-            </select>
-            <img src="../../../assets/imgs/xiala.png" alt="">
+                <img src="../../../assets/imgs/xiala.png" alt="">
+            </select> -->
+            <BaseSelect v-on:select="showProject"
+              :selectedValue="projectName"
+              :dataList="list"
+              :widthData="widthData"></BaseSelect>
         </div>
     </header>
 </template>
 
 <script>
+import BaseSelect from '../../../components/xiala'
 export default{
     name:'IndexHeader',
-    data(){
+    components:{
+        BaseSelect
+    },
+     data(){
       return {
-          langu:{
-            zh:"中文",
-            en:"English",
-            ja:"日本語",
-          },
+          list:[
+          {key:"zh",value:"中文"},
+          {key:"en",value:"English"},
+          {key:"ja",value:"日本語"}
+        ],
+        projectName:{//岁子组件的选择值改变而改变的值
+          key:"",
+          value:""
+        },
+        widthData:"60px",
       }
     },
     updated() {
@@ -56,7 +69,7 @@ export default{
         box-sizing: border-box;
         background: #3b3b3b;
         .h1{
-            width: 128px;
+            width: 136px;
             height: 38px;
             color: #757575;
             margin-left: 30px;
@@ -105,14 +118,15 @@ export default{
                 text-align: center;
                 font: 28px/68px "微软雅黑";
                 -webkit-appearance: none; /*for chrome*/
+                img{
+                    width: 20px;
+                    height: 10px;
+                    // position: absolute;
+                    // right: 40px;;
+                    // top: 30px;
+                }
             }
-            img{
-                width: 20px;
-                height: 10px;
-                position: absolute;
-                right: 40px;;
-                top: 30px;
-            }
+            
         }
     }
 </style>

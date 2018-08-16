@@ -43,7 +43,7 @@ export default {
       width: 100%;
       height: 346px;
       position: absolute;
-      left: 700px;
+      left: 1000px;
       top: 120px;
       background: url(../../assets/imgs/NAIL.png) no-repeat;
       background-size: 1100px 346px;

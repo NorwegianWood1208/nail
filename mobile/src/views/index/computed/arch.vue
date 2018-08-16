@@ -57,7 +57,7 @@ export default {
                     height: 55px;
                     padding-top: 18px;
                     box-sizing: border-box;
-                    font: 24px/42px "微软雅黑";
+                    font:bold 24px/42px "微软雅黑";
                     img{
                         width: 55px;
                         height: 55px;;
@@ -66,7 +66,7 @@ export default {
                     }
                 }
                 .lis-con{
-                    font: 20px/24px "微软雅黑";
+                    font: 20px/34px "微软雅黑";
                     margin-top: 20px;
                 }
             }

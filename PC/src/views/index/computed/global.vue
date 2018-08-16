@@ -1,6 +1,6 @@
 <template>
     <div class="con-global">
-        <h3 class="title"><span>{{$t("Global")}}</span> {{$t("trend")}}—</h3>
+        <h3 class="title"><span class="span1">{{$t("Global")}}</span> <span class="span2">{{$t("trend")}}</span> —</h3>
         <div class="ul1">
             <div class="ul">
                 <div class="lis ma-le-160">
@@ -45,7 +45,7 @@ export default {
     .con-global{
         width: 100%;
         height: 590px;
-        background: #323232;
+        background: #323232 url(../../../assets/imgs/global.jpg) no-repeat;
         position: relative;
         padding-top: 120px;
         box-sizing: border-box;
@@ -59,8 +59,11 @@ export default {
             left: -210px;
             text-align: right;
             transform: rotate(-90deg);
-            span{
+            .span1{
                 color: #fff;
+            }
+            .span2{
+                margin-right: 20px;
             }
         }
         .lis{

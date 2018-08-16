@@ -12,14 +12,11 @@
                 <div class="register">{{$t("Register")}}</div>
             </div> -->
 
-            <!-- <select class="lange" @change="handchange($event)" ref="aaa">
-                <option class="desfont" v-for="(index,value) in langu" :value="value" :key="value">{{index}}</option>
-            </select> -->
             <BaseSelect v-on:select="showProject"
               :selectedValue="projectName"
               :dataList="list"
               :widthData="widthData"></BaseSelect>
-            <img src="../../../assets/imgs/xiala.png" alt="">
+            
         </div>
     </header>
 </template>
@@ -96,18 +93,18 @@ export default{
             float: left;
             font: 18px/34px "华文细黑";
             color: #757575;
-            .login{
-                float: left;
-            }
-            .register{
-                float: left;
-            }
+                .login{
+                    float: left;
+                }
+                .register{
+                    float: left;
+                }
             }
             .lange{
                 font-size: 16px;
                 float: right;
                 color: #b9bcc3;
-                text-align: center;
+                text-align: right;
                 margin-right: 40px;
                 background: #3b3b3b;
                 font: 16px/34px "微软雅黑";
@@ -117,13 +114,7 @@ export default{
                     border: none;
                 }
             }
-            img{
-                width: 10px;
-                height: 5px;
-                position: absolute;
-                right: 20px;;
-                top: 15px;
-            }
+            
         }
     }
 </style>

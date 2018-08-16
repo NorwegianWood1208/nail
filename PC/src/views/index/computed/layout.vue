@@ -48,14 +48,17 @@
                             <div class="swiper-pagination"  slot="pagination"></div>
                         </swiper>
                         <!-- ja -->
-                        <div class="ja" >
-                            <div class="swiper-title">{{$t("high")}}</div>
-                            <div class="swiper-con">
-                                <div class="swiper-lis">{{$t("Stock")}}</div>
-                                <div class="swiper-lis">{{$t("NASDAQ")}}</div>
-                                <div class="swiper-lis">{{$t("Tokyo")}}</div>
-                            </div>
-                        </div>
+                        <swiper  :options="swiperOption" class="ja">
+                            <swiper-slide>
+                                <div class="swiper-title">{{$t("high")}}</div>
+                                 <div class="swiper-con">
+                                    <div class="swiper-lis">{{$t("Stock")}}</div>
+                                    <div class="swiper-lis">{{$t("NASDAQ")}}</div>
+                                    <div class="swiper-lis">{{$t("Tokyo")}}</div>
+                                </div>
+                            </swiper-slide>
+                            <div class="swiper-pagination"  slot="pagination"></div>
+                        </swiper>
                     </div>
                     <!-- 第二个模块 -->
                     <div class="lis">
@@ -82,21 +85,20 @@
                                 <div class="swiper-con">
                                     <div class="swiper-lis">Inauguaration ceremony of global top-level exchange</div>
                                     <div class="swiper-lis">Designated blockchain landmarks of 20 sovereign countries</div>
-                                    <div class="swiper-lis">National  TV publicity </div>
+                                    <div class="swiper-lis"></div>
                                 </div>
                             </swiper-slide>
                             <swiper-slide>
                                 <div class="swiper-title">{{$t("Implementation")}}</div>
                                 <div class="swiper-con">
-                                    <div class="swiper-lis">Offline customer exchange services among high-end VIP customers around the world</div>
-                                    <div class="swiper-lis">NAIL excahnge hall of Eco-hatching programme </div>
-                                    
+                                    <div class="swiper-lis">National  TV publicity Offline customer exchange services among high-end VIP customers around the world</div>
+                                    <div class="swiper-lis">NAIL excahnge hall of Eco-</div>
                                 </div>
                             </swiper-slide>
                             <swiper-slide>
                                 <div class="swiper-title">{{$t("Implementation")}}</div>
                                 <div class="swiper-con">
-                                    <div class="swiper-lis">NAIL global vulenteers technology training business institute</div>
+                                    <div class="swiper-lis">hatching programme NAIL global vulenteers technology training business institute</div>
                                 </div>
                             </swiper-slide>
                             <div class="swiper-pagination"  slot="pagination"></div>
@@ -157,13 +159,13 @@
                             <swiper-slide>
                                 <div class="swiper-title">{{$t("Superior")}}</div>
                                  <div class="swiper-con">
-                                    <div class="swiper-lis">Real-time updating of  original code  data of  Github , NAIL business institute is built with offline communication  club ( free of charge for possessing some</div>
+                                    <div class="swiper-lis">Real-time updating of  original code  data of  Github , NAIL business institute is built with offline communication  club ( free of charge for </div>
                                 </div>
                             </swiper-slide>
                             <swiper-slide>
                                 <div class="swiper-title">{{$t("Superior")}}</div>
                                  <div class="swiper-con">
-                                    <div class="swiper-lis"> certain quantities).NAIL hatching base , market value management team and multidimensionally build up the world class project.</div>
+                                    <div class="swiper-lis"> possessing some certain quantities).NAIL hatching base , market value management team multidimensionally build up the world class project.</div>
                                 </div>
                             </swiper-slide>
                             <div class="swiper-pagination"  slot="pagination"></div>
@@ -223,14 +225,14 @@
                             <swiper-slide>
                                 <div class="swiper-title">{{$t("supported")}}</div>
                                  <div class="swiper-con">
-                                    <div class="swiper-lis">NAIL ecology entails investment & financing platform,  media publicity platform,  blockchain project hatching platform, exchange, business institute etc,. all </div>
+                                    <div class="swiper-lis">NAIL ecology entails investment & financing platform,  media publicity platform,  blockchain project hatching platform, exchange, business </div>
     
                                 </div>
                             </swiper-slide>
                             <swiper-slide>
                                 <div class="swiper-title">{{$t("supported")}}</div>
                                  <div class="swiper-con">
-                                    <div class="swiper-lis">these engagement of businesses will be conducted on the premise of multi-nation support, therefore, NAIL is the optimal choice.</div>
+                                    <div class="swiper-lis">  etc,. all these engagement of businesses will be conducted on the premise of multi-nation support, therefore, NAIL is the optimal choice.</div>
                                 </div>
                             </swiper-slide>
                             <swiper-slide>
@@ -238,7 +240,7 @@
                                  <div class="swiper-con">
                                     <div class="swiper-lis">Investment Financing platform </div>
                                     <div class="swiper-lis">National media publicity platform </div>
-                                    <div class="swiper-lis">Blockchain project hatching platform</div>
+                                    <div class="swiper-lis">Blockchain project  hatching platform</div>
                                 </div>
                             </swiper-slide>
                             <div class="swiper-pagination"  slot="pagination"></div>
@@ -335,23 +337,26 @@
                             <swiper-slide>
                                 <div class="swiper-title">{{$t("landmark")}}</div>
                                  <div class="swiper-con">
-                                    <div class="swiper-lis">The countries to build up blockchain landmarks are as follows: Japan, Korea, Mongolia, Singapore, China, Malaysia, Canada, kyrgyzstan, the United States</div>
+                                    <div class="swiper-lis">The countries to build up blockchain landmarks are as follows: Japan, Korea, Mongolia, Singapore, China, Malaysia, Canada, kyrgyzstan</div>
                                 </div>
                             </swiper-slide>
                             <swiper-slide>
                                 <div class="swiper-title">{{$t("landmark")}}</div>
                                  <div class="swiper-con">
-                                    <div class="swiper-lis"> and Russia.</div>
+                                    <div class="swiper-lis">, the United States and Russia.</div>
                                 </div>
                             </swiper-slide>
                             <div class="swiper-pagination"  slot="pagination"></div>
                         </swiper>
-                        <div class="ja">
-                             <div class="swiper-title">{{$t("landmark")}}</div>
-                            <div class="swiper-con">
-                                <div class="swiper-lis">ブロックチェーンを建設する国は日本、韓国、モンゴル、シンガポール、中国、マレーシア、カナダ、キルギスタン、米国、ロシア。</div>
-                            </div>
-                        </div>
+                        <swiper  :options="swiperOption" class="ja">
+                            <swiper-slide>
+                                <div class="swiper-title">{{$t("high")}}</div>
+                                 <div class="swiper-con">
+                                    <div class="swiper-lis">ブロックチェーンを建設する国は日本、韓国、モンゴル、シンガポール、中国、マレーシア、カナダ、キルギスタン、米国、ロシア。</div>
+                                </div>
+                            </swiper-slide>
+                            <div class="swiper-pagination"  slot="pagination"></div>
+                        </swiper>
                     </div>
                     <!-- 七个 -->
                     <div class="lis">
@@ -374,12 +379,15 @@
                             </swiper-slide>
                             <div class="swiper-pagination"  slot="pagination"></div>
                         </swiper>
-                        <div class="ja">
-                            <div class="swiper-title">{{$t("international")}}</div>
-                            <div class="swiper-con">
-                                <div class="swiper-lis">この国は、日本、韓国、モンゴル、中国、キルギスタンで行われる。</div>
-                            </div>
-                        </div>
+                        <swiper  :options="swiperOption" class="ja">
+                            <swiper-slide>
+                                <div class="swiper-title">{{$t("high")}}</div>
+                                <div class="swiper-con">
+                                    <div class="swiper-lis">この国は、日本、韓国、モンゴル、中国、キルギスタンで行われる。</div>
+                                </div>
+                            </swiper-slide>
+                            <div class="swiper-pagination"  slot="pagination"></div>
+                        </swiper>
                     </div>
                     <!-- 八个 -->
                     <div class="lis no-magin-r">
@@ -402,12 +410,15 @@
                             </swiper-slide>
                             <div class="swiper-pagination"  slot="pagination"></div>
                         </swiper>
-                        <div class="ja">
-                            <div class="swiper-title">{{$t("hatching")}}</div>
-                            <div class="swiper-con">
-                                <div class="swiper-lis">ブロックチェーンを建設する国は、日本、中国、キルギスタンで行われる</div>
-                            </div>
-                        </div>
+                        <swiper  :options="swiperOption" class="ja">
+                            <swiper-slide>
+                                <div class="swiper-title">{{$t("high")}}</div>
+                                <div class="swiper-con">
+                                    <div class="swiper-lis">ブロックチェーンを建設する国は、日本、中国、キルギスタンで行われる</div>
+                                </div>
+                            </swiper-slide>
+                            <div class="swiper-pagination"  slot="pagination"></div>
+                        </swiper>
                     </div>
                 </div>
             </div>
@@ -653,7 +664,7 @@ export default {
             box-sizing: border-box;
             position: absolute;
             top: 23px;
-            right: 70px;
+            right: 40px;
             color: #78787e;
             font: 24px/32px Calibri;
             .one{
@@ -664,7 +675,7 @@ export default {
     .layout-bottom{
         width: 100%;
         .title{
-            font: 30px/90px "Humnst777";
+            font:bold 30px/90px "Humnst777";
             margin-bottom: 50px;
         }
         .con{
@@ -685,53 +696,67 @@ export default {
                 img{
                     float: left;
                 }
-                .zh{
-                    width: 213px;
-                    height: 280px;
-                    float: left;
-                    display: none;
-                    .swiper-title{
-                        font: 16px/28px "Humnst777";
-                        margin-bottom: 20px;
-                    }
-                    .swiper-con{
-                        font: 14px/24px "Humnst777";
+                .zhh{
+                    margin-top: 3px;
+                    height: 240px;
+                    .swiper-slide{
+                        width: 213px;
+                        height: 280px;
+                        float: left;
+                        .swiper-title{
+                            font:bold 16px/28px "Humnst777";
+                            margin-bottom: 20px;
+                        }
+                        .swiper-con{
+                            font: 14px/24px "Humnst777";
+                        }
                     }
                 }
                 .ja{
-                    width: 213px;
-                    height: 220px;
-                    float: left;
-                    display: none;
-                    .swiper-title{
-                        font: 16px/28px "Humnst777";
-                        margin-bottom: 20px;
-                    }
-                    .swiper-con{
-                        font: 14px/24px "Humnst777";
-                    }
-                }
-                .swiper-slide{
-                    height: 220px;
-                    float: left;
-                    overflow: hidden;
-                    .swiper-title{
-                        font: 16px/28px "Humnst777";
-                        margin-bottom: 20px;
-                    }
-                    .swiper-con{
-                        width: 212px;
-                        overflow: hidden;
-                        font: 14px/24px "Humnst777";
-                        .swiper-lis{
-                            width: 214px;
-                            text-align:justify;
-                            text-justify:inter-ideograph;
-                            word-break:break-all;
+                    margin-top: 3px;
+                    .swiper-slide{
+                        width: 213px;
+                        height: 220px;
+                        float: left;
+                        .swiper-title{
+                            font:bold 16px/28px "Humnst777";
+                            margin-bottom: 20px;
+                        }
+                        .swiper-con{
+                            width: 210px;
+                            font: 14px/24px "Humnst777";
+                            .swiper-lis{
+                                width: 210px;
+                            }
                         }
                     }
-                    
                 }
+                .mySwiper{
+                    margin-top: 3px;
+                    height: 240px;
+                    .swiper-slide{
+                        height: 220px;
+                        float: left;
+                        overflow: hidden;
+                        .swiper-title{
+                            width: 210px;
+                            font:bold 16px/28px "Humnst777";
+                            margin-bottom: 20px;
+                        }
+                        .swiper-con{
+                            width: 210px;
+                            overflow: hidden;
+                            font: 14px/24px "Humnst777";
+                            .swiper-lis{
+                                width: 210px;
+                                text-align:justify;
+                                text-justify:inter-ideograph;
+                                word-break:break-all;
+                            }
+                        }  
+                    }
+                }
+                    
                 
             }
         }

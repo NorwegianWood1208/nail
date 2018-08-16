@@ -6,7 +6,7 @@ export default {
   Register : 'Register',
   Offcial1:'Offc',
   Offcial2:'ial',
-  Strategic :'Strategic objectives ',
+  Strategic :'STRATEGIC OBJECTIVES',
   ecological :'NAIL  Powerful ecological hatching ',
   institution:'NAIL  Business institution',
   landmarks:'10 national blockchain landmarks',

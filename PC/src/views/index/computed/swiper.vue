@@ -20,7 +20,10 @@
                 <img src="../../../assets/imgs/btc.png" alt="">
             </swiper-slide>
             <div class="swiper-pagination"  slot="pagination"></div>
+            
         </swiper>
+        <div class="swiper-button-prev swiper_btn"></div>
+        <div class="swiper-button-next swiper_btn"></div>
     </div>
 </template>
 
@@ -33,7 +36,13 @@ export default{
                 pagination: {
                     el: '.swiper-pagination',
                 },
-            }
+                navigation: {
+                    el:'.swiper-pagination',
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            },
+            
         }
     }
 }
@@ -43,6 +52,7 @@ export default{
         width: 100%;
         height: 508px;
         padding:  0 60px;
+        position: relative;
         box-sizing: border-box;
         background:  #3b3b3b ;
         h3{
@@ -52,7 +62,7 @@ export default{
             font: 18px/28px "微软雅黑";
             transform: rotate(-90deg);
             position: absolute;
-            top: 310px;
+            top: 240px;
             span{
                 color: #646464;
             } 
@@ -68,13 +78,13 @@ export default{
             }
         }
         .swiper-container{
-            width: 1040px;
+            width: 1200px;
             height: 500px;
             box-sizing: border-box;
-            padding-top: 116px;
+            padding-top: 70px;
             margin-left: 208px;
-            .swiper-slider{
-                width: 640px;
+            .swiper-slide{
+                width: 1200px;
                 height: 120px;
                 color: #fff;
                 font: 42px/66px "微软雅黑";
@@ -98,6 +108,10 @@ export default{
             }
             .swiper-pagination{
                 text-align: right;
+                left: 0px;
+                top: 90%;
+                padding-right: 150px;
+                box-sizing: border-box;
                 .swiper-pagination-bullet{
                     border-radius: 0;
                     width: 40px;
@@ -110,6 +124,25 @@ export default{
                     background: #969696;
                 }
             }
+           
+        }
+         .swiper-button-next{
+            position: absolute;
+            right: 50px;
+            top: 90%;
+            width: 46px;
+            height: 46px;;
+            outline:none;
+            background: url(../../../assets/imgs/right.png) no-repeat;
+        }
+        .swiper-button-prev{
+            position: absolute;
+            left: 1350px;
+            top: 90%;
+            width: 46px;
+            height: 46px;;
+            outline:none;
+            background: url(../../../assets/imgs/lift.png) no-repeat;
         }
     }
 </style>

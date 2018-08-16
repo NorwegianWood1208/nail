@@ -18,15 +18,16 @@
     cursor: pointer;
   }
   .base-select {
-    width: 80px;
-    height: 49px;;
+    width: 60px;
+    height: 63px; ;
+    // height: 49px;;
     position: relative;
     top: -7px;
     float: right;
     // border: 1px solid;
     // height: 25px;
     color: #969696;
-    font-size: 18px;
+    font-size: 24px;
     //width: 160px;
     &:after {
       position: absolute;
@@ -42,13 +43,14 @@
     }
       .sub-selected-value {
         position: absolute;
-        top: 15px;
+        // top: 15px;
         .sub-select-list:hover{
           cursor: pointer;
         }
         .sub-select-list {
+          line-height: 30px;
           position: absolute;
-          top: 33px;
+          top: 60px;
           background: #3d3d3d;
           //width: 160px;
           // box-shadow: 1px 1px 1px 1px #D9D9D9;
@@ -78,8 +80,8 @@
           width: 10px;
           height: 5px;
           position: absolute;
-          right: 20px;;
-          top: 22px;
+          right: 30px;;
+          top: 30px;
       }
   }
 </style>
