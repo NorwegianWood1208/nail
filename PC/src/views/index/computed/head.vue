@@ -1,28 +1,33 @@
 <template>
-    <header class="head">
-        <img class="h1" src="../../../assets/imgs/h1.png" alt="">
+    <header class="head"
+    >
+        <router-link to="/"><img class="h1" src="../../../assets/imgs/h1.png" alt=""></router-link>
         <div class="float-right">
             <nav class="nav">
                 <!-- <div class="lis">{{$t("home")}}</div> -->
                 <!-- <div class="lis">{{$t("Assets")}}</div>
                 <div class="lis">{{$t("Introduction")}}</div> -->
             </nav>
-            <!-- <div class="lis-login">
-                <div class="login">{{$t("Login")}}/</div>
-                <div class="register">{{$t("Register")}}</div>
-            </div> -->
+            
 
             <BaseSelect v-on:select="showProject"
               :selectedValue="projectName"
               :dataList="list"
               :widthData="widthData"></BaseSelect>
-            
+            <div class="lis-login">
+                <div @click="login" class="btnlogin">{{$t("Login")}}/</div>
+                <div @click="register" class="btnregister">{{$t("Register")}}</div>
+            </div>
         </div>
     </header>
 </template>
 
 <script>
 import BaseSelect from '../../../components/xiala'
+import { mapState,mapMutations } from 'vuex'
+import axios from 'axios'
+import  Vue from 'vue'
+Vue.prototype.$list = '11' 
 export default{
     name:'IndexHeader',
     components:{
@@ -30,16 +35,18 @@ export default{
     },
     data(){
       return {
-          list:[
-          {key:"zh",value:"中文"},
-          {key:"en",value:"English"},
-          {key:"ja",value:"日本語"}
-        ],
+        list:[
+                {key:"zh",value:"中文"},
+                {key:"en",value:"English"},
+                {key:"ja",value:"日本語"}
+            ],
         projectName:{//岁子组件的选择值改变而改变的值
           key:"",
           value:""
         },
         widthData:"120px",
+        num:this.$store.state.lists,
+        loginvalue:true
       }
     },
     mounted(){
@@ -53,12 +60,50 @@ export default{
     //     window.localStorage.setItem('language', event.target.value)
     //     window.localStorage.setItem('lang', this.langu[event.target.value])
     //   },
+        // ...mapMutations(['getlist']),
       showProject (){
-        console.log("下拉列表的值改变了");
-        console.log("213122"+this.projectName.value);
-        console.log("213122"+this.projectName.key);
+           
+            console.log(this.$store.commit);
+            
+            var params = new URLSearchParams();
+            let token = localStorage.token
+            // let lan = localStorage.language
+            params.append('language', this.projectName.key);
+            params.append('token', token);
+            let that = this;
+            axios({
+			url:' http://www.nailfuture.com/Userapi/currencyList',
+			method: 'post',
+			data: params,
+            })
+            .then(function (res) {
+                if (res.data.msg == 'success') {
+                     that.$store.commit('getlist',res.data.data)
+                    // that.$list = res.data.data;
+                }
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
       },
+      login(){
+          let register = document.querySelector('.register')
+          let login = document.querySelector('.login')
+          register.style.display = 'none'
+          login.style.display = 'block'
+      },
+      register(){
+          let register = document.querySelector('.register')
+          let login = document.querySelector('.login')
+          register.style.display = 'block'
+          login.style.display = 'none'
+      }
     },
+    computed:{
+        m(){
+            return this.$store.state.lists
+        }
+    }
 }
 </script>
 <style lang="less">
@@ -90,14 +135,20 @@ export default{
             .lis-login{
             overflow: hidden;
             padding:  0 40px;
-            float: left;
+            float: right;
+            margin-left: 300px;
             font: 18px/34px "华文细黑";
             color: #757575;
-                .login{
-                    float: left;
+                .btnlogin,.btnregister:hover{
+                    cursor: pointer;
                 }
-                .register{
+                .btnlogin{
                     float: left;
+                     color: #757575;
+                }
+                .btnregister{
+                    float: left;
+                    color: #757575;
                 }
             }
             .lange{

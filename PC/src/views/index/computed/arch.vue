@@ -4,7 +4,7 @@
         <img class="sanjiao" src="../../../assets/imgs/sanjiao.png" alt="">
         <div class="Arch-con">
             <div class="con-lis">
-                <div class="lis-title"><img src="../../../assets/imgs/america.png" alt="">{{$t("America")}}</div>
+                <div class="lis-title"><img src="../../../assets/imgs/america.png" alt="">{{$t("Consensus")}}</div>
                 <div class="lis-con">{{$t("utilizes")}}</div>
             </div>
             <div class="con-lis no-magin">

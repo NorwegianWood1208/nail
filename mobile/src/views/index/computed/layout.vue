@@ -353,7 +353,7 @@
                     </div>
                     <!-- 七个 -->
                     <div class="lis">
-                        <img style="paddingTop:5px;" src="../../../assets/imgs/international.png" alt="">
+                        <img  src="../../../assets/imgs/international.png" alt="">
                         <swiper  :options="swiperOption" class="zhh">
                             <swiper-slide>
                                 <div class="swiper-title">{{$t("international")}}</div>
@@ -685,7 +685,7 @@ export default {
                         float: left;
                     }
                     .zhh{
-                        margin-top: 20px;
+                        margin-top: 17px;
                         .swiper-slide{
                             width: 280px;
                             height: 340px;
@@ -701,7 +701,7 @@ export default {
                         }
                     }
                     .ja{
-                        margin-top: 20px;
+                        margin-top: 17px;
                         .swiper-slide{
                             width: 280px;
                             height: 341px;
@@ -720,7 +720,7 @@ export default {
                         width: 280px;
                         height: 340px;
                         float: left;
-                        margin-top: 25px;
+                        margin-top: 17px;
                         .swiper-slide{
                             width: 280px;
                             height: 340px;

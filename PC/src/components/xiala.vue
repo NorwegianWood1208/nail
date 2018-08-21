@@ -2,7 +2,6 @@
   <!--下拉单选框-->
   <div class="base-select" @click="showDataList" v-bind:style="{width: widthData}">
       <div class="sub-selected-value">
-        <!-- <span ref="def">中文</span> -->
         {{lange.value}}<!--显示选择的值-->
         <div class="sub-select-list" v-bind:style="{width: widthData}" v-if="showData">
           <div class="sub-select-item" v-for="(item, index) in dataList" :key="index" @click.stop="select(item, index)">
@@ -121,7 +120,7 @@
         let lan = window.localStorage.getItem('lang')
         let lang = window.localStorage.getItem('language')
         this.$i18n.locale = lang
-        console.log(this.$i18n.locale);
+        // console.log(this.$i18n.locale);
         this.lange.value = lan
       },
     },
@@ -129,6 +128,12 @@
       this.$i18n.locale = window.localStorage.getItem('language')?window.localStorage.getItem('language'):this.lange.key
 
       this.lange.value = window.localStorage.getItem('lang')?window.localStorage.getItem('lang'):this.lange.value 
+    },
+    watch: {
+      lang(aaa,bbb){
+        console.log(aaa,bbb);
+        
+      }
     }
   }
 </script>

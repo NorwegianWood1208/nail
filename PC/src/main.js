@@ -4,6 +4,7 @@ import router from './router';
 import store from './store';
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import echarts from 'echarts'
+// import axios from 'axios'
 import './assets/reset.css'
 import 'swiper/dist/css/swiper.css'
 Vue.config.productionTip = false;
@@ -12,7 +13,7 @@ import VueI18n from 'vue-i18n'
 import i18n from './lang/index' 
 // import zh_CN from 'vee-validate/dist/locale/zh_CN'
 Vue.use(VueI18n);
-
+// Vue.use(axios);
 Vue.use(VueAwesomeSwiper)
 new Vue({
   router,
