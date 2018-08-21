@@ -189,7 +189,7 @@ export default {
             width: 594px;
             height: 685px;
             position: absolute;
-            left: 38%;;
+            left: 10%;;
             top: 284px;
             z-index: 16;
             // display: none;
@@ -255,7 +255,7 @@ export default {
                 cursor: pointer;
             }
             .register1{
-                width: 90px;
+                width: 100px;
                 height: 46px;
                 color: #7e7e7e;
                 margin: 0 auto;

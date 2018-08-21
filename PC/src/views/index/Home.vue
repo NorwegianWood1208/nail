@@ -1,11 +1,11 @@
 <template>
   <div class="wrap">
     <div class="pos"></div>
+    <login></login>
+    <register></register>
     <div class="index">
       <index-header></index-header>
       <div class="content">
-        <login></login>
-        <register></register>
         <index-swiper></index-swiper>
         <index-layout></index-layout>
         <index-global></index-global>

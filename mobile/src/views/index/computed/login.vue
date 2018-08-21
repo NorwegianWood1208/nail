@@ -170,8 +170,9 @@ export default {
             width: 594px;
             height: 588px;
             position: absolute;
-            left: 38%;
+            left: 10%;
             top: 284px;
+            // margin: 50 auto;
             z-index: 16;
             background: #252525 url(../../../assets/imgs/NAIL.png) no-repeat center top;
             background-size: 506px 152px;

@@ -1,6 +1,8 @@
 <template>
   <div class="wrap">
     <div class="pos"></div>
+    <login></login>
+    <register></register>
     <div class="index">
       <index-header></index-header>
       <div class="content">
@@ -21,6 +23,8 @@ import IndexGlobal from './computed/global'
 import IndexArch from './computed/arch'
 import IndexFooter from './computed/footer'
 import IndexSwiper from './computed/swiper'
+import Login from './computed/login'
+import Register from './computed/register'
 export default {
   name:'Home',
   components:{
@@ -29,7 +33,9 @@ export default {
     IndexGlobal,
     IndexArch,
     IndexFooter,
-    IndexSwiper
+    IndexSwiper,
+    Login,
+    Register
   }
 }
 </script>

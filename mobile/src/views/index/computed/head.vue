@@ -7,10 +7,10 @@
                 <!-- <div class="lis">{{$t("Assets")}}</div>
                 <div class="lis">{{$t("Introduction")}}</div> -->
             </nav>
-            <!-- <div class="lis-login">
-                <div class="login">{{$t("Login")}}/</div>
-                <div class="register">{{$t("Register")}}</div>
-            </div> -->
+            <div class="lis-login">
+                <div @click="login" class="btnlogin">{{$t("Login")}}/</div>
+                <div @click="register" class="btnregister">{{$t("Register")}}</div>
+            </div>
             <!-- <select class="lange" @change="handchange($event)" ref="aaa">
                 <option class="desfont" v-for="(index,value) in langu" :value="value" :key="value">{{index}}</option>
                 <img src="../../../assets/imgs/xiala.png" alt="">
@@ -25,6 +25,8 @@
 
 <script>
 import BaseSelect from '../../../components/xiala'
+import { mapState,mapMutations } from 'vuex'
+import axios from 'axios'
 export default{
     name:'IndexHeader',
     components:{
@@ -44,21 +46,53 @@ export default{
         widthData:"60px",
       }
     },
-    updated() {
-        let lang = window.localStorage.getItem('language')
-    },
-    mounted(){
-        let lan = window.localStorage.getItem('language')
-        if (lan) {
-            this.$refs.aaa.value = lan
-        }
-    },
+    // updated() {
+    //     let lang = window.localStorage.getItem('language')
+    // },
+    // mounted(){
+    //     let lan = window.localStorage.getItem('language')
+    //     if (lan) {
+    //         this.$refs.aaa.value = lan
+    //     }
+    // },
     methods:{
       handchange(event){
         this.$i18n.locale = event.target.value
         window.localStorage.setItem('language', event.target.value)
         window.localStorage.setItem('lang', this.langu[event.target.value])
       },
+      showProject (){
+            var params = new URLSearchParams();
+            let token = localStorage.token
+            params.append('language', this.projectName.key);
+            params.append('token', token);
+            let that = this;
+            axios({
+			url:' http://www.nailfuture.com/Userapi/currencyList',
+			method: 'post',
+			data: params,
+            })
+            .then(function (res) {
+                if (res.data.msg == 'success') {
+                     that.$store.commit('getlist',res.data.data)
+                }
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+      },
+      login(){
+          let register = document.querySelector('.register-wrap')
+          let login = document.querySelector('.login-wrap')
+          register.style.display = 'none'
+          login.style.display = 'block'
+      },
+      register(){
+          let register = document.querySelector('.register-wrap')
+          let login = document.querySelector('.login-wrap')
+          register.style.display = 'block'
+          login.style.display = 'none'
+      }
     },
 }
 </script>
@@ -81,7 +115,8 @@ export default{
             float: right;
             margin-top: 28px;
             position: relative;
-            font: 30px/68px "华文细黑";
+            
+            font: 24px/63px "华文细黑";
             .nav{
                 overflow: hidden;
                 float: left;
@@ -97,15 +132,15 @@ export default{
                 }
             }
             .lis-login{
-                width: 100px;
-                line-height: 34px;
                 overflow: hidden;
+                position: relative;
+                top: -7px;
                 float: left;
                     color: #757575;
-                    .login{
+                    .btnlogin{
                         float: left;
                     }
-                    .register{
+                    .btnregister{
                         float: left;
                     }
             }

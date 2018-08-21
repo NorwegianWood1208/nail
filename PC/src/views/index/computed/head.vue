@@ -50,24 +50,12 @@ export default{
       }
     },
     mounted(){
-    //   if (lan) {
-    //        this.$refs.aaa.value = lan
-    //     }
+
     },
     methods:{
-    //   handchange(event){
-    //     this.$i18n.locale = event.target.value
-    //     window.localStorage.setItem('language', event.target.value)
-    //     window.localStorage.setItem('lang', this.langu[event.target.value])
-    //   },
-        // ...mapMutations(['getlist']),
       showProject (){
-           
-            console.log(this.$store.commit);
-            
             var params = new URLSearchParams();
             let token = localStorage.token
-            // let lan = localStorage.language
             params.append('language', this.projectName.key);
             params.append('token', token);
             let that = this;
@@ -79,7 +67,6 @@ export default{
             .then(function (res) {
                 if (res.data.msg == 'success') {
                      that.$store.commit('getlist',res.data.data)
-                    // that.$list = res.data.data;
                 }
             })
             .catch(function (error) {
@@ -87,14 +74,14 @@ export default{
             });
       },
       login(){
-          let register = document.querySelector('.register')
-          let login = document.querySelector('.login')
+          let register = document.querySelector('.register-wrap')
+          let login = document.querySelector('.login-wrap')
           register.style.display = 'none'
           login.style.display = 'block'
       },
       register(){
-          let register = document.querySelector('.register')
-          let login = document.querySelector('.login')
+          let register = document.querySelector('.register-wrap')
+          let login = document.querySelector('.login-wrap')
           register.style.display = 'block'
           login.style.display = 'none'
       }
